@@ -110,3 +110,9 @@ GitHub: https://github.com/Aditya-g028
 ---
 
 ⭐ If you find this project interesting, consider giving it a star!
+
+## 🖥️ Dashboard Preview
+
+Here is a preview of the AttendWise AI application:
+
+![AttendWise AI Dashboard](screenshots/dashboard.png)
