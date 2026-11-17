@@ -1,14 +1,15 @@
-
 import pandas as pd
 from flask import Flask, render_template, request
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LinearRegression
 from sklearn.metrics import mean_absolute_error
+from pathlib import Path
 
 app = Flask(__name__)
 
-# Load student dataset
-data = pd.read_csv("data/student_data.csv")
+# Load student dataset using an absolute project path
+BASE_DIR = Path(__file__).resolve().parent
+data = pd.read_csv(BASE_DIR / "data" / "student_data.csv")
 
 # Select input and output
 X = data[["attendance", "internal_marks", "assignment_marks"]]
@@ -74,4 +75,4 @@ def predict():
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(debug=False)
